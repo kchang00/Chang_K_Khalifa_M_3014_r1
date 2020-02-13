@@ -1,0 +1,32 @@
+//sass --watch sass:public/css --style compressed
+@import '_vars';
+@import 'modules/_header';
+@import 'modules/_destin';
+@import 'modules/_subscription';
+@import 'modules/_error';
+
+.hidden {
+    display: none !important;
+}
+
+html, body { height: 100%; }
+
+body {
+    p {
+        @include copy-font;
+    };
+}
+
+h1, h2 {
+    @include heading-font;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
