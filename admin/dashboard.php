@@ -1,4 +1,7 @@
 <?php
+    // must go at very start of file
+    // references last session
+    session_start();
     require_once '../load.php';
 ?>
 
@@ -8,10 +11,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+    <title>Dashboard | Welcome</title>
 </head>
 <body>
-    <h1>Welcome to the dashboard page</h1>
+    <h1>Welcome!</h1>
+    <!-- calls upon current session time -->
+    <p><?php echo $_SESSION['last_login']; ?></p>
     <a href="logout.php">Logout</a>
 </body>
 </html>
