@@ -1,0 +1,127 @@
+.destin-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    h1 {
+        margin-top: 40px;
+        font-size: 40px;
+    }
+    h2 {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+}
+
+.video {
+    width: 100%;
+}
+
+.destin-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        background-color: $blue;
+        color: white;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+.destin-img {
+    margin-top: 40px;
+    width: 80%;
+    margin-bottom: -6px;
+}
+
+.destin-comp {
+    .destin-hero {
+        position: relative;
+        width: 100%;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+        background: $blue;
+        padding: 20px;
+        top: -3%;
+        a {
+            @include copy-font;
+            color: $white;
+            padding: 20px;
+            background-color: $orange;
+            text-align: center;
+        }
+
+        p{
+            @include copy-font;
+            color: $white;
+            margin-bottom: 40px;
+        }
+        h1 {
+            @include heading-font;
+            margin-bottom: 20px;
+        }
+    }
+    .attract {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 20px;
+    }
+    .attract-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        justify-content: center;
+        align-items: center;
+        .attract-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+        }
+        h3 {
+            @include heading-font;
+            font-size: 2em;
+            margin: 1em 0em;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width:550px) {
+    .destin-links {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .destin-comp {
+        .intro {
+            padding: 40px 80px;
+        }
+        .attract {
+            padding: 0px 40px;
+        }
+}
+
+@media screen and (min-width:950px) {
+    .destin-links {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .destin-comp {
+        .intro {
+            padding: 100px;
+        }
+        .attract-wrapper{
+            max-width: 50%;
+            padding: 3em;
+        }
+    }
+    }
+}

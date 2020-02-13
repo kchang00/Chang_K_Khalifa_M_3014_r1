@@ -1,0 +1,6 @@
+References
+
+https://www.php.net/manual/en/function.header.php
+https://www.php.net/manual/en/function.dirname.php
+https://codeburst.io/using-vue-js-components-in-php-applications-e5bfde8763bc
+https://router.vuejs.org/guide/essentials/named-routes.html
