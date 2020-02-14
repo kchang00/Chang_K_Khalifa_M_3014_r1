@@ -2,9 +2,6 @@
     session_start();
     require_once '../load.php';
     // $_ALLCAPS => format for a built in PHP variable
-    date_default_timezone_set ('EST');
-    $reqtime = date('Y-m-d H:i:s');
-    $time = date('i');
     // resets session attempts if necessary
     if($_SESSION['attempts'] !== 0){
         $_SESSION['attempts'] = $_SESSION['attempts'];
@@ -21,6 +18,8 @@
         if(!empty($username) && !empty($password)){
             //Login (login = function)
             // once the user presses submit and the login succeeds, record the current time
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
             $_SESSION['login'] = $reqtime;
             $message = login($username, $password, $reqtime);
         }else{

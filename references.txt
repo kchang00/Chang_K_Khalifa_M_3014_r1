@@ -20,3 +20,17 @@ https://www.tutorialrepublic.com/php-tutorial/php-sessions.php
 
 https://stackoverflow.com/questions/30770438/blocked-the-user-after-3-attempts-in-php
 https://stackoverflow.com/questions/16509643/php-lockout-user-after-3-failed-log-ins-for-10-minutes
+
+----------------------
+DB Conection
+----------------------
+https://www.php.net/manual/en/function.mysql-fetch-row.php
+https://stackoverflow.com/questions/1997721/fatal-error-call-to-private-myobject-construct-from-invalid-context
+https://www.geeksforgeeks.org/static-function-in-php/
+
+----------------------
+Timed Messages
+----------------------
+
+https://stackoverflow.com/questions/8529656/how-do-i-convert-a-string-to-a-number-in-php
+https://www.tutorialrepublic.com/php-tutorial/php-functions.php
