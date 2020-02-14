@@ -16,7 +16,8 @@
 <body>
     <h1>Welcome!</h1>
     <!-- calls upon current session time -->
-    <p><?php echo $_SESSION['last_login']; ?></p>
+    <p>Current Session: <?php echo $_SESSION['login']; ?></p>
+    <p>Last Session: <?php echo $_SESSION['last_login']; ?></p>
     <a href="logout.php">Logout</a>
 </body>
 </html>
