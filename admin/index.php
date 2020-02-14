@@ -11,7 +11,7 @@
         if(!empty($username) && !empty($password)){
             //Login (login = function)
             // once the user presses submit and the login succeeds, record the time
-            $_SESSION['last_login'] = $reqtime;
+            $_SESSION['login'] = $reqtime;
             $message = login($username, $password, $reqtime);
         }else{
             $message = 'Please fill out the required fields';
