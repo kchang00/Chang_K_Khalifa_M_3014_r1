@@ -2,9 +2,6 @@
     session_start();
     require_once '../load.php';
     // $_ALLCAPS => format for a built in PHP variable
-    date_default_timezone_set ('EST');
-    $reqtime = date('Y-m-d H:i:s');
-    $time = date('i');
     // resets session attempts if necessary
     if($_SESSION['attempts'] !== 0){
         $_SESSION['attempts'] = $_SESSION['attempts'];

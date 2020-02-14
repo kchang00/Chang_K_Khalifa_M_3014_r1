@@ -54,9 +54,7 @@
     <title>Dashboard | Welcome</title>
 </head>
 <body>
-    <?php
-        echo time();
-    ?>
+    <h1><?php swap_date($hours);?></h1>
     <!-- calls upon current session time -->
     <!-- <p>Current Session: < ?php echo $_SESSION['login']; ?></p>
     <p>Last Session: < ?php echo $_SESSION['last_login']; ?></p> -->
