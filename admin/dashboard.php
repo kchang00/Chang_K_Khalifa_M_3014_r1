@@ -3,6 +3,15 @@
     // references last session
     session_start();
     require_once '../load.php';
+
+    if(isset($_SESSION['login'])){
+        $_SESSION['last_login'] = $_SESSION['last_login'];
+        if ($_SESSION['last_login'] !== null) {
+            $_SESSION['last_login'] = $_SESSION['last_login']; 
+        }else{
+            $_SESSION['last_login'] = $_SESSION['login']; 
+        }
+    }
 ?>
 
 <!DOCTYPE html>

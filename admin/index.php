@@ -2,17 +2,36 @@
     session_start();
     require_once '../load.php';
     // $_ALLCAPS => format for a built in PHP variable
-    $reqtime = date("Y-m-d H:i:s");
+    $reqtime = date('Y-m-d H:i:s');
+    $time = date('i');
+    // resets session attempts if necessary
+    if($_SESSION['attempts'] !== 0){
+        $_SESSION['attempts'] = $_SESSION['attempts'];
+    }else{
+        $_SESSION['attempts'] = 0;
+    }
 
     if(isset($_POST['submit'])) {
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
 
-        if(!empty($username) && !empty($password)){
+        if(!empty($username) && !empty($password) && $_SESSION['attempts_left'] !== 0){
             //Login (login = function)
             // once the user presses submit and the login succeeds, record the time
             $_SESSION['login'] = $reqtime;
             $message = login($username, $password, $reqtime);
+        }elseif($_SESSION['attempts_left'] == 0){
+            $message = 'Too many attempts. Please wait and try again.';
+            // $_SESSION['failed_login'] = 1;
+            // // set the login time to the latest failed_login
+            // if($time * $_SESSION['failed_login'] > 5){
+            //     unset($_SESSION['attempts']);
+            //     // Sets attempts value to 0
+            //     $_SESSION['attempts'] = 0;
+            // }else{
+            //     $message = 'Too many incorrect attempts. Please try again later.';
+            //     echo $time;
+            // }
         }else{
             $message = 'Please fill out the required fields';
         }

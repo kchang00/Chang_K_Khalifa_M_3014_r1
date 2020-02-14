@@ -1,4 +1,10 @@
+
 References
+***********
+
+----------------------
+Last Login
+----------------------
 
 https://www.php.net/manual/en/function.header.php
 https://www.php.net/manual/en/function.dirname.php
@@ -7,3 +13,9 @@ https://router.vuejs.org/guide/essentials/named-routes.html
 https://www.webdeveloper.com/d/279707-how-to-display-last-visited-users-date-and-time-in-header-of-the-webpage/3
 https://www.webdeveloper.com/d/85577-php-last-logged-in-time/8 
 https://www.tutorialrepublic.com/php-tutorial/php-sessions.php 
+
+----------------------
+3 Attempt Lockout
+----------------------
+
+https://stackoverflow.com/questions/30770438/blocked-the-user-after-3-attempts-in-php
