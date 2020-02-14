@@ -43,16 +43,21 @@ function login($username, $password, $reqtime){
                 )
             );
        }
-
        if(isset($id)){
             // calling upon redirect function in scripts/functions.php
             redirect_to('dashboard.php');
             return 'Logged in yay';
         }else{
             // return values being passed into $messages in signup.php
-            return 'Incorrect password';
+            $_SESSION['attempts']++;
+            $_SESSION['attempts_left'] = (4 - $_SESSION['attempts']);
+            if ($_SESSION['attempts_left'] > 0) {
+                return 'Incorrect password. Attempts left: '. $_SESSION['attempts_left'];
+            }else{
+                return 'Too many incorrect attempts. Please try again later.';
+            }
         }
      }else{
-        return 'User does not exist';
+        return 'User does not exist.';
      }      
 }
