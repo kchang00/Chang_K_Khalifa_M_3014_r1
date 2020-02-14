@@ -33,3 +33,4 @@ Timed Messages
 ----------------------
 
 https://stackoverflow.com/questions/8529656/how-do-i-convert-a-string-to-a-number-in-php
+https://www.tutorialrepublic.com/php-tutorial/php-functions.php

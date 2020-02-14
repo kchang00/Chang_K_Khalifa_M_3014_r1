@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 14, 2020 at 06:38 PM
+-- Generation Time: Feb 14, 2020 at 07:25 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -39,7 +39,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_name`, `user_pass`, `user_last_login`, `user_current_login`) VALUES
-(1, 'kchang', 'pass123', '2020-02-14 18:36:06', '2020-02-14 18:36:25');
+(1, 'kchang', 'pass123', '2020-02-14 19:24:42', '2020-02-14 19:24:42'),
+(2, 'mkhalifa', 'test', '2020-02-14 19:23:52', '2020-02-14 19:23:52');
 
 --
 -- Indexes for dumped tables
@@ -59,7 +60,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
