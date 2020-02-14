@@ -54,7 +54,7 @@ function login($username, $password, $reqtime){
             if ($_SESSION['attempts_left'] > 0) {
                 return 'Incorrect password. Attempts left: '. $_SESSION['attempts_left'];
             }else{
-                return 'Too many incorrect attempts. Please try again later.';
+                redirect_to('blocked.php');
             }
         }
      }else{

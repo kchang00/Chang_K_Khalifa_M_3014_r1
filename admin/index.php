@@ -2,6 +2,7 @@
     session_start();
     require_once '../load.php';
     // $_ALLCAPS => format for a built in PHP variable
+    date_default_timezone_set ('EST');
     $reqtime = date('Y-m-d H:i:s');
     $time = date('i');
     // resets session attempts if necessary
@@ -15,13 +16,13 @@
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
 
-        if(!empty($username) && !empty($password) && $_SESSION['attempts_left'] !== 0){
+        if(!empty($username) && !empty($password)){
             //Login (login = function)
             // once the user presses submit and the login succeeds, record the time
             $_SESSION['login'] = $reqtime;
             $message = login($username, $password, $reqtime);
-        }elseif($_SESSION['attempts_left'] == 0){
-            $message = 'Too many attempts. Please wait and try again.';
+        //}elseif($_SESSION['attempts'] == 0){
+            //$message = 'Too many attempts. Please wait and try again.';
             // $_SESSION['failed_login'] = 1;
             // // set the login time to the latest failed_login
             // if($time * $_SESSION['failed_login'] > 5){

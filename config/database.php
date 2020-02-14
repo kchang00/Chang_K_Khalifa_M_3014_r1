@@ -10,7 +10,7 @@ class Database
 
     // for windows, $password = ""
     // for mac, $password = "root"
-    private $password = "root";
+    private $password = "";
 
     private static $instance = null;
     public $conn;
