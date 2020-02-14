@@ -21,6 +21,8 @@
         if(!empty($username) && !empty($password)){
             //Login (login = function)
             // once the user presses submit and the login succeeds, record the current time
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
             $_SESSION['login'] = $reqtime;
             $message = login($username, $password, $reqtime);
         }else{
