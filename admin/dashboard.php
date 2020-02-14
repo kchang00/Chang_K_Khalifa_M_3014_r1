@@ -2,15 +2,13 @@
     // must go at very start of file
     // references last session
     session_start();
+    date_default_timezone_set("EST");
     require_once '../load.php';
 
-    if(isset($_SESSION['login'])){
-        $_SESSION['last_login'] = $_SESSION['last_login'];
-        if ($_SESSION['last_login'] !== null) {
-            $_SESSION['last_login'] = $_SESSION['last_login']; 
-        }else{
-            $_SESSION['last_login'] = $_SESSION['login']; 
-        }
+    if(isset($_SESSION['last_login'])){
+        $_SESSION['last_login'] = $_SESSION['last_login']; 
+    }else{
+        $_SESSION['last_login'] = 'This is your first login';
     }
 ?>
 
@@ -23,7 +21,9 @@
     <title>Dashboard | Welcome</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <?php
+        echo time();
+    ?>
     <!-- calls upon current session time -->
     <p>Current Session: <?php echo $_SESSION['login']; ?></p>
     <p>Last Session: <?php echo $_SESSION['last_login']; ?></p>

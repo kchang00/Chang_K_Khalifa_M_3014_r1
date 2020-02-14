@@ -11,7 +11,6 @@ if(isset($_SESSION['login'])){
     unset($_SESSION['attempts']);
     // Sets attempts value to 0
     $_SESSION['attempts'] = 0;
-
 }
 // session_destroy();
 redirect_to('index.php');

@@ -19,3 +19,4 @@ https://www.tutorialrepublic.com/php-tutorial/php-sessions.php
 ----------------------
 
 https://stackoverflow.com/questions/30770438/blocked-the-user-after-3-attempts-in-php
+https://stackoverflow.com/questions/16509643/php-lockout-user-after-3-failed-log-ins-for-10-minutes
